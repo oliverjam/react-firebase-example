@@ -1,0 +1,20 @@
+{
+  "name": "react-firebase-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "firebase.js",
+  "scripts": {
+    "build": "babel src --out-dir build --copy-files",
+    "predev": "mkdir -p build",
+    "dev": "npm run build -- --watch & servor build --reload"
+  },
+  "keywords": [],
+  "author": "Oliver Phillips <hello@oliverjam.es> (https://oliverjam.es)",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/preset-react": "^7.12.10",
+    "servor": "^4.0.2"
+  }
+}
