@@ -3,6 +3,7 @@
 // fake Firebase for example's sake
 // waits 1 second then calls your callback with a fake user
 // you can totally ignore this implementation
+// as you'll be using the real Firebase from npm
 //
 // =============
 

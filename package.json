@@ -4,8 +4,9 @@
   "description": "",
   "main": "firebase.js",
   "scripts": {
+    "prebuild": "rm -rf build",
     "build": "babel src --out-dir build --copy-files",
-    "predev": "mkdir -p build",
+    "predev": "rm -rf build && mkdir -p build",
     "dev": "npm run build -- --watch & servor build --reload"
   },
   "keywords": [],
