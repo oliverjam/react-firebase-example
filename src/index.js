@@ -19,18 +19,29 @@ function App() {
   return (
     <main>
       <nav>
-        <label htmlFor="choose" style={{ display: "block" }}>
-          Choose example
-        </label>
-        <select
-          id="choose"
-          value={view}
-          onChange={(e) => setView(e.target.value)}
+        <form>
+          <label htmlFor="choose" style={{ display: "block" }}>
+            Choose example
+          </label>
+          <select
+            id="choose"
+            value={view}
+            onChange={(e) => setView(e.target.value)}
+          >
+            {Object.keys(views).map((key) => (
+              <option>{key}</option>
+            ))}
+          </select>
+        </form>
+        <a
+          href={
+            "https://github.com/oliverjam/react-firebase-example/tree/main/src/" +
+            view
+          }
+          target="_blank"
         >
-          {Object.keys(views).map((key) => (
-            <option>{key}</option>
-          ))}
-        </select>
+          View source on GitHub
+        </a>
       </nav>
       <hr />
       {views[view] || <div>No example found</div>}
